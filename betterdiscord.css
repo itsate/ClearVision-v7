@@ -1,0 +1,115 @@
+/*! bnkrll V10 - Transparent Theme
+    A rebrand of ClearVision-v7 by bnks */
+
+@keyframes cv-channel-select { from { right: 100%; } to { right: 0; } }
+@keyframes cv-card-loading { 0% { opacity: .66; } 50% { opacity: .33; } 100% { opacity: .66; } }
+
+/* ===========================================================
+   ROOT VARIABLES
+   =========================================================== */
+:root {
+  --main-color: #2780e6;
+  --hover-color: #1e63b3;
+  --success-color: #43b581;
+  --danger-color: #982929;
+  --background-shading-percent: 2%;
+  --background-image: none;
+  --background-position: center;
+  --background-size: cover;
+  --background-attachment: fixed;
+  --background-filter: none;
+  --normal-text: #ffffff;
+  --muted-text: #bfbfbf;
+  --home-icon: url("https://i.ibb.co/C3dRDh8B/ghost.png");
+  --home-size: contain;
+  --home-position: center;
+  --main-font: "gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --code-font: Consolas,"gg mono","Liberation Mono",Menlo,Courier,monospace;
+}
+
+/* ===========================================================
+   BASE STYLES (TRANSPARENT)
+   =========================================================== */
+.appMount-2yBXZl, .app-2rEoOp, .layer-3QrUeG, .container-3baos1,
+.chat-3bRxxu, .members-1998pB, .guildsWrapper-5TJh6A,
+.wrapper-1Rf91z, .sidebar-2K8pFh, .content-1jQy2l {
+  background: rgba(0,0,0,0.02) !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+.scrollableContainer-15eg7h, .chatContent-3KubbW,
+.contentRegionScroller-2GTwE2, .pageWrapper-2PwDoS {
+  background-color: rgba(0,0,0,0.02) !important;
+  backdrop-filter: none !important;
+}
+
+/* ===========================================================
+   INPUTS
+   =========================================================== */
+.textArea-12jD-V, .input-2A_zIr, .searchBar-3dMhjb {
+  background: rgba(0,0,0,0.05) !important;
+  border: none !important;
+}
+
+/* ===========================================================
+   TITLEBAR / TOOLBAR
+   =========================================================== */
+.title-29uC1r, .toolbar-1t6TWx, .container-1r6BKw {
+  background: rgba(0,0,0,0.02) !important;
+  box-shadow: none !important;
+}
+
+/* ===========================================================
+   BRANDING WORDMARK
+   =========================================================== */
+.wordmark-2u86JB svg {
+  display: none !important;
+}
+.wordmark-2u86JB::after {
+  content: "bnkrll V10";
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(39,128,230,0.7);
+  position: relative;
+  top: 2px;
+}
+
+/* ===========================================================
+   HOME ICON (GHOST)
+   =========================================================== */
+.guilds-2JjMmN .homeIcon-r0w4ny {
+  background: url("https://i.ibb.co/C3dRDh8B/ghost.png") center/contain no-repeat !important;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
+  opacity: 1 !important;
+}
+.guilds-2JjMmN .homeIcon-r0w4ny svg { display: none !important; }
+.guilds-2JjMmN .wrapper-3kah-n,
+.guilds-2JjMmN .childWrapper-1j_1ub {
+  background-color: transparent !important;
+  pointer-events: auto !important;
+}
+
+/* ===========================================================
+   SCROLLBAR / TRANSITION
+   =========================================================== */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255,255,255,0.35);
+}
+
+.container-1r6BKw, .appMount-2yBXZl, .chat-3bRxxu {
+  transition: all 0.3s ease-in-out;
+}
+
+/* ===========================================================
+   GLOBAL
+   =========================================================== */
+* {
+  color-scheme: dark;
+  font-family: var(--main-font) !important;
+}
